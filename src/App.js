@@ -1,40 +1,44 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import FlowChart from './components/FlowChart';
+// import GroovyEditor from "groovy-edit-react";
 import "./index.less";
-import React from "react";
-import { init } from "@rematch/core";
-import * as models from "./models";
-import { Route, Router, Switch } from "react-router-dom";
-import { Provider } from "react-redux";
-import { createBrowserHistory } from "history";
-import { routes } from "./router";
-import Error from "@/pages/Error";
 
-const store = init({
-	models
-});
+const data = {
+    nodes: [
+        {
+            id: "0001",
+            size: { width: 100, height: 30 },
+            position: { x: 100, y: 100 },
+            content: "节点1", // string or html 内容
+            selected: false, // 节点选中状态
+        },
+        {
+            id: "0002",
+            size: { width: 100, height: 30 },
+            position: { x: 300, y: 300 },
+            content: "节点2", // string or html 内容
+            selected: false, // 节点选中状态
+        }
+    ],
+    links: [
+        {
+            source: "0001", // 源节点
+            target: "0002", // 目标节点
+            type: "line", // 直线：line，曲线：curve，贝塞尔曲线：besselcurve
+            displacement: 30, // 源节点与目标节点中心点的偏移量
+            content: "线", // string or html 内容
+            attrs: { // 样式
+                fill: "#f00"
+            }
+        }
+    ]
+};
 
-const history = createBrowserHistory();
-
-const { dispatch } = store;
-window.dispatch = dispatch;
-
-class App extends React.Component {
-
-	render() {
-		return (
-			<Provider store={store}>
-				<Router history={history}>
-					<Switch>
-						{
-							routes.map(route => (
-								<Route key={route.path} path={route.path} component={route.component} exact={route.exact} />
-							))
-						}
-						<Route component={Error} />
-					</Switch>
-				</Router>
-			</Provider>
-		);
-	}
-}
-
-export default App;
+ReactDOM.render(
+    <div className="g-wrap">
+        <FlowChart />
+    </div>,
+    document.getElementById('app')
+);

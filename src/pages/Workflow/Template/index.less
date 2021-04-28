@@ -7,6 +7,7 @@
     text-rendering: optimizeLegibility;
     border: 1px solid #E0E0E0;
     -webkit-font-smoothing: antialiased;
+    background: #fff;
     .lb-paper{
         float: right;
         width: calc(100% - 120px);
@@ -65,12 +66,21 @@
         border: none;
         border-right: 1px solid #E0E0E0;
     }
+    .joint-stencil>.content{
+        padding: 0 !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        height: auto !important;
+        margin: 0 !important;
+    }
 }
 .tntx-workflow-fullscreen{
     position: fixed;
     width: calc(100vw);
     height: calc(100vh);
     z-index: 300;
+    left: 0;
+    top: 0;
 }
 .joint-element .fobj body {
     font-size: 12px;

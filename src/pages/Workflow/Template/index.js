@@ -5,7 +5,7 @@
 
 import "./index.less";
 import { useEffect, useRef } from "react";
-import NewWorkflow from "../../Workflow";
+import NewWorkflow from "../index";
 import Toolbar from "./Toolbar";
 // import { mockData } from "../mockData";
 

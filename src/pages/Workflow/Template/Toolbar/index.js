@@ -67,7 +67,7 @@ export default props => {
 			{
 				zoom &&
 				<span className="zoom">
-					<Tooltip title="缩小">
+					<Tooltip title="缩小" placement="bottom">
 						<Icon
 							type="minus"
 							className="zoom-out"
@@ -79,7 +79,7 @@ export default props => {
 						/>
 					</Tooltip>
 					<span className="text">{count}%</span>
-					<Tooltip title="放大">
+					<Tooltip title="放大" placement="bottom">
 						<Icon
 							type="plus"
 							className="zoom-in"
@@ -94,25 +94,25 @@ export default props => {
 			}
 			{
 				clear &&
-				<Tooltip title="清空画布">
+				<Tooltip title="清空画布" placement="bottom">
 					<span className="clear-graph" onClick={() => graphInstance.current.clear()}></span>
 				</Tooltip>
 			}
 			{
 				undo &&
-				<Tooltip title="撤销">
+				<Tooltip title="撤销" placement="bottom">
 					<span className="undo" onClick={() => graphInstance.current.undo()}></span>
 				</Tooltip>
 			}
 			{
 				redo &&
-				<Tooltip title="重做">
+				<Tooltip title="重做" placement="bottom">
 					<span className="redo" onClick={() => graphInstance.current.redo()}></span>
 				</Tooltip>
 			}
 			{
 				print &&
-				<Tooltip title="打印">
+				<Tooltip title="打印" placement="bottom">
 					<Icon
 						type="printer"
 						className="print"
@@ -140,10 +140,10 @@ export default props => {
 				}}>
 					{
 						isScreen
-							? <Tooltip title="退出全屏">
+							? <Tooltip title="退出全屏" placement="bottom">
 								<Icon type="fullscreen-exit" />
 							</Tooltip>
-							: <Tooltip title="全屏">
+							: <Tooltip title="全屏" placement="bottom">
 								<Icon type="fullscreen" />
 							</Tooltip>
 					}

@@ -21,7 +21,12 @@ const AsyncComponent = Loadable({
 	loading: MyLoadingComponent
 });
 
+const AsyncWorkflow = Loadable({
+	loader: () => import("@/pages/Workflow/Template"),
+	loading: MyLoadingComponent
+});
+
 export const routes = [
-	{ path: "/", component: AsyncHome, exact: true },
+	{ path: "/", component: AsyncComponent, exact: true },
 	{ path: "/component", component: AsyncComponent }
 ];

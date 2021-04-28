@@ -22,3 +22,80 @@
         }
     }
 }
+
+// 样式重置
+.joint-stencil.joint-theme-default{
+    border: none;
+}
+.joint-navigator.joint-theme-default{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+.joint-navigator.joint-theme-default>.joint-paper{
+    box-shadow: none;
+}
+.joint-navigator.joint-theme-default .current-view{
+    border: 1px dashed #607D8B;
+}
+.joint-navigator.joint-theme-default .current-view-control{
+    border: 1px solid #607D8B;
+}
+.snapline.horizontal {
+    border-color: #607D8B;
+}
+.snapline.vertical {
+    border-color: #607D8B;
+}
+.joint-toolbar.joint-theme-default{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border: none;
+    padding-bottom: 10px;
+    height: 54px;
+    border-bottom: 1px solid #E0E0E0;
+    background: #fff;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.joint-tooltip.joint-theme-default {
+    color: #fff;
+    font-size: 14px;
+    background: rgba(0, 0, 0, .75);
+    border: none;
+    border-radius: 5px;
+    padding: 0px 5px;
+    line-height: 1;
+    box-shadow: none;
+}
+.joint-tooltip.joint-theme-default.top {
+    .tooltip-arrow {
+        border: none;
+    }
+    .tooltip-arrow-mask {
+        border-bottom-color: rgba(0, 0, 0, .75) !important;
+    }
+}
+.joint-widget.joint-theme-default[data-type=zoomToFit]:after{
+    margin: 0 auto;
+}
+.joint-widget.joint-theme-default[data-type=zoomOut]:after{
+    margin: 0 auto;
+}
+.joint-widget.joint-theme-default[data-type=zoomIn]:after{
+    margin: 0 auto;
+}
+.joint-widget.joint-theme-default[data-name=clear]:after{
+    content: 'clear';
+}
+.joint-widget.joint-theme-default[data-name=print]:after{
+    content: 'print';
+}
+.joint-widget.joint-theme-default[data-type=separator]{
+    line-height: 24px;
+}
+.joint-halo.surrounding.small .box, .joint-halo.joint-theme-default .box{
+    display: none;
+}

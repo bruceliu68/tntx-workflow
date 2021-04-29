@@ -164,7 +164,7 @@ class Workflow {
 			paper: this.paper
 		});
 		this.config.stencilDom.append(this.stencil.render().el);
-		let data = this.config.stencilItem || stencilItem;
+		let data = _.cloneDeep(this.config.stencilItem || stencilItem);
 		let arr = [];
 		data.forEach(item => {
 			let obj;

@@ -1,6 +1,6 @@
 {
   "name": "@tntx/workflow",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "流程图模板",
   "main": "lib/Template/index.js",
   "scripts": {
@@ -30,7 +30,7 @@
     "@babel/preset-env": "^7.6.3",
     "@babel/preset-react": "^7.6.3",
     "@rematch/core": "^2.0.1",
-    "antd": "^3.24.3",
+    "antd": "^3.26.20",
     "autoprefixer": "^9.7.0",
     "axios": "^0.21.1",
     "babel-eslint": "^10.0.3",

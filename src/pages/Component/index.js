@@ -3,16 +3,26 @@
  * @Describe: 测试次页
  */
 
-import { useRef, useState } from "react";
+import { useRef, useEffect } from "react";
 import Workflow from "../Workflow/Template";
+import mockData from "./mockData";
 
 export default props => {
 	const graphInstance = useRef();
 
+	useEffect(() => {
+		if (graphInstance?.current) {
+			graphInstance.current.paper.on("element:pointerclick", (cellView, e) => {
+				console.log("单击线", e);
+			});
+		}
+	}, [graphInstance?.current]);
+
 	return (
 		<div style={{ width: 1000, height: 800 }}>
 			<Workflow
-				readOnly={false} // 默认false
+				initData={mockData}
+				readOnly={true} // 默认false
 				config={{
 					router: "orthogonal", // 连线模式，默认orthogonal， orthogonal,manhattan,metro,normal
 					vertexAdd: false // 是否支持线添加转折点，默认false
@@ -39,9 +49,7 @@ export default props => {
 			/>
 			<button onClick={() => {
 				// console.log(graphInstance.current.clear());
-				graphInstance.current.paper.on("element:pointerclick", (cellView, e) => {
-					console.log("单击线", e);
-				});
+
 			}}>sdfsdf</button>
 		</div>
 	);

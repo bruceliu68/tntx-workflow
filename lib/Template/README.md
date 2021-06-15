@@ -1,5 +1,7 @@
 ## @tntx/workflow 流程图解决方案
 
+![image](https://github.com/bruceliu68/tntx-workflow/blob/master/src/pages/Workflow/img/overview.png)
+
 ### 前言
 由于我们底层用的是joint.js，所以开发前需要安装必要的依赖，依赖下载如下：
 - [点击下载 jquery.min.js](https://sinan.tongdun.me/cdn/bucket/disk/book/2805/3245/20210428144801486_jquery.min.js?download=true "点击下载JQuery")

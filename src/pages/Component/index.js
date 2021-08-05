@@ -6,6 +6,7 @@
 import { useRef, useEffect } from "react";
 import Workflow from "../Workflow/Template";
 import mockData from "./mockData";
+import { Button } from "antd";
 
 export default props => {
 	const graphInstance = useRef();
@@ -22,7 +23,7 @@ export default props => {
 		<div style={{ width: 1000, height: 800 }}>
 			<Workflow
 				initData={mockData}
-				readOnly={true} // 默认false
+				readOnly={false} // 默认false
 				config={{
 					router: "orthogonal", // 连线模式，默认orthogonal， orthogonal,manhattan,metro,normal
 					vertexAdd: false // 是否支持线添加转折点，默认false
@@ -47,10 +48,10 @@ export default props => {
 				}}
 				getGraphInstance={(ref) => { graphInstance.current = ref.current; }}
 			/>
-			<button onClick={() => {
+			<Button onClick={() => {
 				// console.log(graphInstance.current.clear());
 
-			}}>sdfsdf</button>
+			}}>sdfsdf</Button>
 		</div>
 	);
 };

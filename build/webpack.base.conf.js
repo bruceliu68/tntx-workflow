@@ -65,7 +65,10 @@ module.exports = {
 							javascriptEnabled: true,
 							modules: true,
 							localIndexName: "[name]__[local]___[hash:base64:5]",
-							modifyVars: path.resolve(__dirname, "../src/common/theme.js")
+							// modifyVars: path.resolve(__dirname, "../src/common/theme.js")
+							modifyVars: {
+								hack: "true; @import \"~@tntd/antd-cover/tnt.less\";"
+							}
 						}
 					}
 				]

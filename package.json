@@ -1,6 +1,6 @@
 {
   "name": "@tntx/workflow",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "流程图模板",
   "main": "lib/Template/index.js",
   "scripts": {
@@ -72,6 +72,7 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
+    "@tntd/antd-cover": "^3.0.4",
     "dagre": "^0.8.5",
     "graphlib": "^2.1.8"
   }
